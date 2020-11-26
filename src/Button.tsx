@@ -64,7 +64,7 @@ export class Button extends React.Component<ButtonProps> {
     const { actionButton, style, text, textStyle, onPress } = this.props
 
     return (
-      <TouchableOpacity style={[style]} onPressIn={onPress}>
+      <TouchableOpacity style={[style]} onPressIn={onPress} testID={`calculatorButton${text}`}>
         <View style={styles.container}>
           {actionButton
             ? this.renderButton(text)
